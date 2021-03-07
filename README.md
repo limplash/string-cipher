@@ -1,6 +1,6 @@
 # String-Cipher
 
-Simple set of crypto function for encrypting and decrypting UTF-8 strings. The module uses AES-GMC (128, 192 and 256) bases on Node crypto module.  Solution used is based on this [gist](https://gist.github.com/AndiDittrich/4629e7db04819244e843). By using GMC encryption chiper text is authenticated as well. Base of this module are the make functions that generate desired encrypt and decrypt functions. 
+Simple set of crypto function for encrypting and decrypting UTF-8/ACSII strings. The module uses AES-GMC (128, 192 and 256) bases on Node crypto module.  Solution used is based on this [gist](https://gist.github.com/AndiDittrich/4629e7db04819244e843). By using GMC encryption chiper text is authenticated as well. Base of this module are the make functions that generate desired encrypt and decrypt functions. 
 
 Written in Typescript as an ES6 module, all functions are provided in Sync and Async versions. In order to imporve over all security scheme, user supplied `Password` and random `Salt` is used to drive a key using pbkdf2 (with default iterations of 1, for speed but this can be changed using options). The key length depends on the AES-GMC version (128/192/256 use 16/24/32 bit keys) other values are defaulted to values specified by [RFC 5288](https://tools.ietf.org/html/rfc5288)
 
@@ -92,13 +92,13 @@ const retrivedText = await customDecrypt(cipherText, fetchedPassword);
 ## Make Functions Option
 |Option|Type|Required|Values|Default|Notes|
 |------|----|--------|------|-------|-----|
-|algorithm|CipherGCMTypes|Yes|`aes-256-gcm | aes-128-gcm | aes-192-gcm`|none||
-|stringEncoding|string|No|`utf8 | ascii`|`utf8`|encoding format of the input string|
-|outputEncoding|string|No|`base64 | hex`|`base64`|only for encryption function output format|
-|inputEncoding|string|No|`base64 | hex`|`base64`|only for decryption function input format|
+|algorithm|CipherGCMTypes|Yes|`aes-256-gcm`,`aes-128-gcm`,`aes-192-gcm`|none||
+|stringEncoding|string|No|`utf8`,`ascii`|`utf8`|encoding format of the input string|
+|outputEncoding|string|No|`base64`,`hex`|`base64`|only for encryption function output format|
+|inputEncoding|string|No|`base64`,`hex`|`base64`|only for decryption function input format|
 |ivLength|number|No|any number|12|Security of encryption depends on this 12 is recomemded|  
 |authTagLength|number|No|any number|16|Security of encryption depends on this 16 is recomemded|
 |saltLength|number|No|any number|32|Used for password generation|
 |iterations|number|No|any number|1|Used by pbkdf2 to drive key, main factor is speed|
-|digest|string|No|`sha256 | sha512`|`sha256`|Used by pbkdf2 to drive key|
+|digest|string|No|`sha25`,`sha512`|`sha256`|Used by pbkdf2 to drive key|
 
