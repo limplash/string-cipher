@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "target": "es2015",
+      "lib": [
+        "es2020"
+      ],
+      "moduleResolution": "node",
+      "baseUrl": "./",
+      "outDir": "./dist"
+    },
+    "exclude": [
+      "node_modules",
+      "dist"
+    ],
+    "include": [
+      "src/**/*.ts"
+    ]
+  }
