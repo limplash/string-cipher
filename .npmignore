@@ -2,7 +2,7 @@
 .vscode/
 
 # generated from tsc
-dist/
+src/
 
 # Dependency directories
 node_modules/
