@@ -1,9 +1,12 @@
 {
   "name": "string-cipher",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple string encryption and decryption functions",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/limplash/string-cipher.git"
@@ -12,7 +15,7 @@
     "test": "jest",
     "eslint": "eslint '**/*.ts'",
     "eslint:fix": "eslint --fix '**/*.ts'",
-    "build": "webpack --config ./webpack.config.js"
+    "build": "tsc"
   },
   "keywords": [
     "cipher",
