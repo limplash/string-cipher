@@ -1,8 +1,9 @@
 {
   "name": "string-cipher",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Simple string encryption and decryption functions",
   "main": "./dist/index.js",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/limplash/string-cipher.git"
