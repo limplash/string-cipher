@@ -1,6 +1,6 @@
 {
   "name": "string-cipher",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple string encryption and decryption functions",
   "main": "./dist/index.js",
   "repository": {
@@ -14,10 +14,12 @@
     "build": "webpack --config ./webpack.config.js"
   },
   "keywords": [
-    "encrypt",
-    "encryption",
+    "cipher",
+    "decipher",
     "decrypt",
     "decryption",
+    "encrypt",
+    "encryption",
     "aes-256-gcm",
     "aes-192-gcm",
     "aes-128.gcm"
